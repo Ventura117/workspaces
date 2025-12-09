@@ -1,0 +1,115 @@
+body {
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column;
+height: 100vh;
+font-family: Arial, sans-serif;
+}
+
+#main-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #f5f5f5;
+padding: 10px 20px;
+border-bottom: 1px solid #ddd;
+}
+
+#header-left {
+display: flex;
+gap: 20px;
+font-size: 20px;
+font-weight: bold;
+}
+
+
+#header-right {
+display: flex;
+gap: 15px;
+align-items: center;
+}
+
+
+#searchbar {
+padding: 6px 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+
+#layout-container {
+display: flex;
+height: 100%;
+}
+
+
+#sidebar {
+width: 200px;
+background-color: #fafafa;
+border-right: 1px solid #ddd;
+padding: 10px;
+overflow-y: auto;
+}
+
+
+.sidebar-item {
+padding: 8px 10px;
+cursor: pointer;
+border-radius: 4px;
+transition: background-color 0.2s;
+}
+
+
+.sidebar-item:hover {
+background-color: #e6e6e6;
+}
+
+
+/* Active link styling */
+/* Highlight the entire sidebar item, not just the text */
+.sidebar-item.active {
+    background-color: #007BFF;       /* accent color */
+    color: #fff;
+    border-left: 4px solid #0056b3;  /* left indicator */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Ensure the link text inside the container inherits white */
+.sidebar-item.active a {
+    color: #fff;
+}
+
+
+.sidebar-parent {
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-weight: bold;
+}
+/* Make all sidebar links inherit normal text color */
+.sidebar-item a {
+    color: inherit;        /* Matches the parent text color */
+    text-decoration: none; /* Removes underline */
+}
+
+/* Optional: change hover color */
+.sidebar-item a:hover {
+    color: inherit;
+}
+
+
+.child-container {
+margin-left: 10px;
+display: none;
+}
+
+
+.arrow {
+transition: transform 0.2s;
+}
+
+
+.arrow.open {
+transform: rotate(90deg);
+}
